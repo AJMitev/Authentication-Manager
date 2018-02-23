@@ -25,16 +25,16 @@
         [Column("StudentId", TypeName = "nvarchar(10)")]
         public ulong StudentId { get; private set; }
 
-        public virtual  ICollection<Course> Courses { get; set; }
+        public virtual  ICollection<ICourse> Courses { get; set; }
 
-        public void EnrollCourse(Course course)
+        public void EnrollCourse(ICourse course)
         {
             Courses.Add(course);
         }
 
         public override string Welcome()
         {
-            return $"Welcome, {this.Email}, you are logged from {this.IpAddress}. Your Student ID is {this.StudentId}";
+            return $"Welcome, {this.Email}, you are logged from {this.IpAddress}. Your Student ID is {this.StudentId}. Currently you participate in ${this.Courses.Count} courses";
         }
     }
 }

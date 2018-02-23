@@ -2,8 +2,8 @@
 {
     using System.Data.Entity;
 
-    using Data;
-    using Data.Migrations;
+    using AuthenticationManager.Data;
+    using AuthenticationManager.Data.Migrations;
 
     public static class DataHelpers
     {

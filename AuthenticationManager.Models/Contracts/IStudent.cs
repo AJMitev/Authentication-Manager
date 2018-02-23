@@ -5,8 +5,8 @@
     public interface IStudent: IUser
     {
         ulong StudentId { get; }
-         ICollection<Course> Courses { get; set; }
+         ICollection<ICourse> Courses { get; set; }
 
-        void EnrollCourse(Course course);
+        void EnrollCourse(ICourse course);
     }
 }

@@ -1,7 +1,7 @@
 ﻿namespace AuthenticationManager.Models
 {
-    using Abstraction;
-    using Contracts;
+    using AuthenticationManager.Models.Abstraction;
+    using AuthenticationManager.Models.Contracts;
 
     public class Teacher : User, IUser, ITeacher
     {
@@ -26,5 +26,10 @@
         public string Faculty { get; set; }
 
         public virtual ICourse Course { get; set; }
+
+        public override string Welcome()
+        {
+            return $"Welcome, {this.Email}, you are logged from {this.IpAddress}. Currently you teaching in ${this.Course.Name}.";
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace AuthenticationManager.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    using Models;
+    using AuthenticationManager.Models;
 
     public sealed class Configuration : DbMigrationsConfiguration<AuthManagerDbContext>
     {

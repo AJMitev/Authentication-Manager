@@ -5,7 +5,6 @@
 
     using AuthenticationManager.Common;
     using AuthenticationManager.Data;
-    using Models;
 
     public class StartUp
     {

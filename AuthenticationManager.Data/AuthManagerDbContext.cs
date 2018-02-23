@@ -1,7 +1,8 @@
 ﻿namespace AuthenticationManager.Data
 {
     using System.Data.Entity;
-    using Models;
+
+    using AuthenticationManager.Models;
 
     public class AuthManagerDbContext : DbContext
     {
