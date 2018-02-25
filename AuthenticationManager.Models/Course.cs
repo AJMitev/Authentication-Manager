@@ -12,6 +12,7 @@
         public Course(string name)
         {
             this.Name = name;
+            this.Students = new HashSet<IStudent>();
         }
 
         [Key]
@@ -21,7 +22,7 @@
 
         public virtual Teacher TeacherId { get; set; }
 
-        public virtual ICollection<Student> Students { get; set; }
+        public virtual ICollection<IStudent> Students { get; set; }
         
     }
 }

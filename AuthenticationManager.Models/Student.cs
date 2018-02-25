@@ -14,6 +14,7 @@
         {
             this.UserType = TypeOfUser.Student;
             this.StudentId = StudentIdentityGenerator.GenerateStudentNumber();
+            this.Courses = new HashSet<ICourse>();
         }
 
         public Student(string email, string password, string firstName, string lastName) : base(email, password, firstName, lastName)
